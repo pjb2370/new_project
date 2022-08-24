@@ -1,23 +1,69 @@
-import logo from './logo.svg';
-import './App.css';
+import style from "./App.module.css";
+import Map from "./Map";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div classname={style.main}>
+      <div className={style.pageTop}>
+        <div className={style.pagegroup}>
+          <h2 className={style.tit_eng}>STORE</h2>
+          <p className={style.sss}>간편하게 공차의 매장을 검색해 보세요.</p>
+        </div>
+      </div>
+      <div className={style.store}>
+        <div className={style.search_board}>
+          <input type="hidden" />
+          <select classname={style.sido} style={{ width: "280px" }}>
+            <option>시/도</option>
+            <option>서울특별시</option>
+            <option>부산광역시</option>
+            <option>대구광역시</option>
+            <option>인천광역시</option>
+            <option>광주광역시</option>
+            <option>대전광역시</option>
+          </select>
+          <select className={style.gugun} style={{ width: "280px" }}>
+            <option>구/군</option>
+            <option>대덕구</option>
+            <option>동구</option>
+            <option>서구</option>
+            <option>중구</option>
+            <option>유성구</option>
+          </select>
+          <div className={style.box} style={{ width: "560px" }}>
+            <input
+              style={{ width: "250px" }}
+              type="text"
+              placeholder="매장명 또는 주소를 입력하세요."
+            />
+            <input type="submit" value="검색" />
+          </div>
+        </div>
+        <div className={style.wrap}>
+          <div className={style.list}>
+            <div className={style.mCSB} style={{ height: "620px" }}>
+              <div
+                className={style.mCSN}
+                style={{
+                  position: "relative",
+                  top: "0px",
+                  left: "0px",
+                }}
+              >
+                <ul>
+                  <li>
+                    <span>둔산타임월드점</span>
+                    <span>대전광역시 서구 둔산동 986번지</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className={style.mm}>
+            <Map />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
