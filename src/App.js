@@ -41,7 +41,7 @@ function App() {
         </div>
         <div className={style.wrap}>
           <div className={style.list}>
-            <div className={style.mCSB} style={{ height: "620px" }}>
+            <div className={style.mCSB} style={{ max_height: "none" }}>
               <div
                 className={style.mCSN}
                 style={{
@@ -50,18 +50,30 @@ function App() {
                   left: "0px",
                 }}
               >
+                <ul className={style.ulu}>
+                  <li className={style.lil}>
+                    <a href="javascript" className={style.mejang}>
+                      <span className={style.jijum}>둔산타임월드점</span>
+                      <span className={style.address}>
+                        대전광역시 서구 둔산동 986번지
+                      </span>
+                    </a>
+                  </li>
+                </ul>
                 <ul>
                   <li>
-                    <span>둔산타임월드점</span>
-                    <span>대전광역시 서구 둔산동 986번지</span>
+                    <a href="javascript" className={style.mejang}>
+                      <span className={style.jijum}>한남대점</span>
+                      <span className={style.address}>
+                        대전광역시 대덕구 오정동 223-267
+                      </span>
+                    </a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <div className={style.mm}>
-            <Map />
-          </div>
+          <Map />
         </div>
       </div>
     </div>
